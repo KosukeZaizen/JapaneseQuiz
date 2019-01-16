@@ -1,0 +1,170 @@
+<div id="disp0">
+<img alt="Lingual Ninja!" height="804px; " id="Header1_headerimg" src="//2.bp.blogspot.com/-zVMyQSp2OKA/W7dKDainWaI/AAAAAAAACPc/OfJfyqBa20AJz_5bo0u44KM0g3pe4_PWwCK4BGAYYCw/s1600/LingualNinja.png" style="display: block" width="1600px; ">
+</div>
+<div id="disp1">
+<h2>
+Please bookmark this page to remember all Katakana characters!</h2>
+<br />
+<br />
+&nbsp; &nbsp;<input id="btn10" onclick="start(10)" style="font-size: 20px;" type="button" value="Random 10 characters" /><br />
+<br />
+&nbsp; &nbsp;<input id="btn102" onclick="start(102)" style="font-size: 20px;" type="button" value="All Katakana characters" />
+<br />
+<br />
+&nbsp; &nbsp;<a href="https://lingualninja.blogspot.com/2018/08/hiragana-quiz.html"><u></u></a><br />
+<h1>
+<a href="https://lingualninja.blogspot.com/2018/08/hiragana-quiz.html"><u>Hiragana quiz &gt;&gt;</u></a></h1>
+<br />
+<br />
+<br /></div>
+<div id="disp2" style="display: none;">
+Progress:&nbsp;<span id="progress">
+0</span>/<span id="max">
+102</span>
+<br />
+Correct:&nbsp;<span id="correct">
+0</span>&nbsp;&nbsp;&nbsp;
+Incorrect:&nbsp;<span id="incorrect">
+0</span><br />
+<br />
+Question:
+<br />
+<div id="header">
+<h1 id="question">
+ア</h1>
+</div>
+<br />
+Which is the correct Romaji for the Katakana character above?
+<br />
+<br />
+&nbsp; &nbsp; 1. <input id="button1" onclick="btnPush('button1')" style="font-size: 20px;" type="button" value="" /><br />
+<br />
+&nbsp; &nbsp; 2. <input id="button2" onclick="btnPush('button2')" style="font-size: 20px;" type="button" value="" /><br />
+<br />
+&nbsp; &nbsp; 3. <input id="button3" onclick="btnPush('button3')" style="font-size: 20px;" type="button" value="" /><br />
+<br />
+&nbsp; &nbsp; 4. <input id="button4" onclick="btnPush('button4')" style="font-size: 20px;" type="button" value="" /><br />
+<br /></div>
+<div id="disp3" style="display: none;">
+<h1>
+Your score is:<br />
+&nbsp; &nbsp;<span id="score"></span>
+/
+<span id="maxScore"></span></h1>
+<br />
+<div id="incList">
+</div>
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input onclick="location.href='https://lingualninja.blogspot.com/2018/08/katakana-quiz.html'" style="font-size: 15px;" type="button" value="Retry" />
+<br />
+<br />
+<div style="border: 5px double #333333; margin-bottom: 10px; padding: 10px;">
+<b><span style="font-size: large;">Related articles:</span></b><br />
+<br />
+<span style="font-size: large;">&nbsp; &nbsp; <u><a href="https://lingualninja.blogspot.com/2018/08/katakana-chart.html" target="_blank">Katakana chart &gt;&gt;</a></u></span><br />
+<br />
+<span style="font-size: large;">&nbsp; &nbsp; <u><a href="https://lingualninja.blogspot.com/2018/09/japlish-wasei-eigo.html" target="_blank">Japlish - Eat a Pee Man!? &gt;&gt;</a></u></span><br />
+<br />
+<span style="font-size: large;">&nbsp; &nbsp; <u><a href="https://lingualninja.blogspot.com/2018/08/hiragana-quiz.html" target="_blank">Hiragana quiz &gt;&gt;</a></u></span>
+</div>
+<br /></div>
+<script type="text/javascript">
+
+document.getElementById("disp0").style.display="none";
+
+var list1 = {a:'ア', i:'イ', u:'ウ', e:'エ', o:'オ', ka:'カ', ki:'キ', ku:'ク', ke:'ケ', ko:'コ', sa:'サ', shi:'シ', su:'ス', se:'セ', so:'ソ', ta:'タ', chi:'チ', tsu:'ツ', te:'テ', to:'ト', na:'ナ', ni:'ニ', nu:'ヌ', ne:'ネ', no:'ノ', ha:'ハ', hi:'ヒ', fu:'フ', he:'ヘ', ho:'ホ', ma:'マ', mi:'ミ', mu:'ム', me:'メ', mo:'モ', ya:'ヤ', yu:'ユ', yo:'ヨ', ra:'ラ', ri:'リ', ru:'ル', re:'レ', ro:'ロ', wa:'ワ', wo:'ヲ', n:'ン', ga:'ガ', gi:'ギ', gu:'グ', ge:'ゲ', go:'ゴ', za:'ザ', ji:'ジ', zu:'ズ', ze:'ゼ', zo:'ゾ', da:'ダ', de:'デ', do:'ド', ba:'バ', bi:'ビ', bu:'ブ', be:'ベ', bo:'ボ', pa:'パ', pi:'ピ', pu:'プ', pe:'ペ', po:'ポ', kya:'キャ', kyu:'キュ', kyo:'キョ', sha:'シャ', shu:'シュ', sho:'ショ', cha:'チャ', chu:'チュ', cho:'チョ', nya:'ニャ', nyu:'ニュ', nyo:'ニョ', hya:'ヒャ', hyu:'ヒュ', hyo:'ヒョ', mya:'ミャ', myu:'ミュ', myo:'ミョ', rya:'リャ', ryu:'リュ', ryo:'リョ', gya:'ギャ', gyu:'ギュ', gyo:'ギョ', ja:'ジャ', ju:'ジュ', jo:'ジョ', bya:'ビャ', byu:'ビュ', byo:'ビョ', pya:'ピャ', pyu:'ピュ', pyo:'ピョ'}
+
+var list2 = {a:'ア', i:'イ', u:'ウ', e:'エ', o:'オ', ka:'カ', ki:'キ', ku:'ク', ke:'ケ', ko:'コ', sa:'サ', shi:'シ', su:'ス', se:'セ', so:'ソ', ta:'タ', chi:'チ', tsu:'ツ', te:'テ', to:'ト', na:'ナ', ni:'ニ', nu:'ヌ', ne:'ネ', no:'ノ', ha:'ハ', hi:'ヒ', fu:'フ', he:'ヘ', ho:'ホ', ma:'マ', mi:'ミ', mu:'ム', me:'メ', mo:'モ', ya:'ヤ', yu:'ユ', yo:'ヨ', ra:'ラ', ri:'リ', ru:'ル', re:'レ', ro:'ロ', wa:'ワ', wo:'ヲ', n:'ン', ga:'ガ', gi:'ギ', gu:'グ', ge:'ゲ', go:'ゴ', za:'ザ', ji:'ジ', zu:'ズ', ze:'ゼ', zo:'ゾ', da:'ダ', de:'デ', do:'ド', ba:'バ', bi:'ビ', bu:'ブ', be:'ベ', bo:'ボ', pa:'パ', pi:'ピ', pu:'プ', pe:'ペ', po:'ポ', kya:'キャ', kyu:'キュ', kyo:'キョ', sha:'シャ', shu:'シュ', sho:'ショ', cha:'チャ', chu:'チュ', cho:'チョ', nya:'ニャ', nyu:'ニュ', nyo:'ニョ', hya:'ヒャ', hyu:'ヒュ', hyo:'ヒョ', mya:'ミャ', myu:'ミュ', myo:'ミョ', rya:'リャ', ryu:'リュ', ryo:'リョ', gya:'ギャ', gyu:'ギュ', gyo:'ギョ', ja:'ジャ', ju:'ジュ', jo:'ジョ', bya:'ビャ', byu:'ビュ', byo:'ビョ', pya:'ピャ', pyu:'ピュ', pyo:'ピョ'}
+
+
+var incorrectList = {}
+
+var curentGame = 0;
+var maxGame = 102;
+var correct = 0;
+var incorrect = 0;
+var index1;
+
+ function iniSet() {
+   document.getElementById('correct').innerHTML = correct;
+   document.getElementById('incorrect').innerHTML = incorrect;
+   document.getElementById('progress').innerHTML = curentGame + 1;
+
+
+   var aryKeys = Object.keys(list1);
+   index1 = aryKeys[Math.floor(Math.random() * aryKeys.length)];
+
+   document.getElementById('question').innerHTML = list1[index1];
+
+   delete list2[index1];
+
+
+   //ボタン値セット
+   var i;
+   var j;
+   for (i = 0; i < 4; i++) { 
+      var aryKeys = Object.keys(list2);
+      var index = aryKeys[Math.floor(Math.random() * aryKeys.length)];
+      j = i + 1;
+      document.getElementById('button' + j).value = index;
+      delete list2[index];
+   }
+
+   var a = Math.floor( Math.random() * 4 ) + 1 ;
+   document.getElementById('button' + a).value = index1;
+
+   list2 = {a:'ア', i:'イ', u:'ウ', e:'エ', o:'オ', ka:'カ', ki:'キ', ku:'ク', ke:'ケ', ko:'コ', sa:'サ', shi:'シ', su:'ス', se:'セ', so:'ソ', ta:'タ', chi:'チ', tsu:'ツ', te:'テ', to:'ト', na:'ナ', ni:'ニ', nu:'ヌ', ne:'ネ', no:'ノ', ha:'ハ', hi:'ヒ', fu:'フ', he:'ヘ', ho:'ホ', ma:'マ', mi:'ミ', mu:'ム', me:'メ', mo:'モ', ya:'ヤ', yu:'ユ', yo:'ヨ', ra:'ラ', ri:'リ', ru:'ル', re:'レ', ro:'ロ', wa:'ワ', wo:'ヲ', n:'ン', ga:'ガ', gi:'ギ', gu:'グ', ge:'ゲ', go:'ゴ', za:'ザ', ji:'ジ', zu:'ズ', ze:'ゼ', zo:'ゾ', da:'ダ', de:'デ', do:'ド', ba:'バ', bi:'ビ', bu:'ブ', be:'ベ', bo:'ボ', pa:'パ', pi:'ピ', pu:'プ', pe:'ペ', po:'ポ', kya:'キャ', kyu:'キュ', kyo:'キョ', sha:'シャ', shu:'シュ', sho:'ショ', cha:'チャ', chu:'チュ', cho:'チョ', nya:'ニャ', nyu:'ニュ', nyo:'ニョ', hya:'ヒャ', hyu:'ヒュ', hyo:'ヒョ', mya:'ミャ', myu:'ミュ', myo:'ミョ', rya:'リャ', ryu:'リュ', ryo:'リョ', gya:'ギャ', gyu:'ギュ', gyo:'ギョ', ja:'ジャ', ju:'ジュ', jo:'ジョ', bya:'ビャ', byu:'ビュ', byo:'ビョ', pya:'ピャ', pyu:'ピュ', pyo:'ピョ'}
+}
+
+ function btnPush(btnNumber) {
+  question = document.getElementById('question').innerHTML;
+  answer = document.getElementById(btnNumber).value;
+  question = question.replace(/\r?\n/g,"");
+  if (question == list1[answer]){
+   correct = correct +1;
+   alert('Correct!');
+  }else{
+   incorrect = incorrect +1;
+   incorrectList[index1] = question;
+   alert('Incorrect!\n\nCorrect answer:\n    '+ question +' -> ' + index1);
+  }
+  if(curentGame == maxGame - 1){
+    document.getElementById("disp2").style.display="none";
+    document.getElementById("disp3").style.display="block";
+    document.getElementById('score').innerHTML = correct;
+    document.getElementById('maxScore').innerHTML = maxGame;
+
+    var htmlInc1 = "";
+    for(var key in incorrectList){
+       htmlInc1 = "<h2>Characters you should remember:</h2>";
+    }
+
+    var htmlInc = htmlInc1 + "<h1><table style='font-size: 15pt;'>";
+    for(var key in incorrectList){
+      htmlInc = htmlInc + "<tr><td>&nbsp;&nbsp;&nbsp;" + incorrectList[key] + "</td><td> :   </td><td>" + key + "</td>";
+    }
+    htmlInc = htmlInc + "</table></h1>";
+    document.getElementById('incList').innerHTML = htmlInc;
+  }else{
+  curentGame = curentGame + 1;
+  delete list1[index1];
+  iniSet();
+ }
+ }
+
+ function start(maxNum) {
+    document.getElementById("disp1").style.display="none";
+    document.getElementById("disp2").style.display="block";
+  if (maxNum == 10)
+  {
+     maxGame = 10;
+  }
+  else
+  {
+     maxGame = 102;
+  }
+   document.getElementById('max').innerHTML = maxGame;
+ }
+
+iniSet();
+</script>
